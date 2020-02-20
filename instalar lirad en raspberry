@@ -1,0 +1,33 @@
+descargar linrad de .:
+https://sourceforge.net/projects/linrad/
+
+por ejemplo a nuestro raiz .:
+~/
+~/     es el equivalente a /home/pi    , en nuestro ejemplo
+
+es un programa muy complicado de hacerle funcionar
+ya que pide muchos parametros tecnicos de nuestro hardware.
+
+desde el directorio donde lo hemos descargado,
+en este caso /home/pi , ejecutamos .:
+
+>>> sudo apt install ./Linrad-snapshot-armv7l.deb
+ vamos a entrar donde queda guardado .:
+ >>> cd /usr/local/linrad
+
+el fichero de configuracion no lo han hecho ejecutable,
+teniendolo que hacer nosotros con .:
+ >>> sudo chmod +x configure
+ 
+ahora si que funciona, ejecutamos el fichero .:
+>>> sudo ./configure
+ 
+y seguimos ,
+para hacer el ejecutable en linux de 32 bits que es lo unico que funciona en Raspberry 4,
+ ( este ultimo paso tarda bastante en terminar) ejecutamos .:
+
+>>> sudo make xlinrad
+ 
+Una vez finalizado ya podemos ejecutar el programa con .:
+
+./xlinrad
